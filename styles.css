@@ -1,0 +1,184 @@
+/* CSS sheet references the graphic breakdown of webpage */
+
+/* Main body Section */
+body {
+    display: flex;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0px;
+}
+
+/* Nav-Bar Section */
+
+aside {
+    width: 5%;
+    height:700px;
+    background-color: #04AA6D;
+    padding: 10px;
+    display: block;
+
+}
+
+
+/* to space buttons out */
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+.homebtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+.tempbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+.humiditybtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+.vocbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+/* Code to remove purple colour when link is previously visited */
+a:visited { 
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Title section */
+
+.titleSection {
+    padding: 20px;
+    background-color: #04AA6D;
+    width: relative;
+    font-size: x-large;
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    display: flex;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Aptos', sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: 'Aptos', sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 4px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+/* Graph Section */
+
+
+.graphSect {
+    background-color: black;
+    background-repeat: no-repeat;
+    color : white;
+    padding: 80px;
+    width: 490px;
+    height: 320px;
+    box-sizing: content-box;
+    background-image: url("images/temperature_hourly3.png");
+
+}
+
+/* Summary Section */
+.summarySect {
+    background-color: bisque;
+}
+
+.ul {
+    list-style: none;
+    display:block;
+    text-decoration: none;
+}
+
+/* CSS to make webpage responsive */
+
+@media screen {
+    
+}
+

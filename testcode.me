@@ -1,0 +1,30 @@
+while True:
+    line = ser.readline()
+    encoding = chardet.detect(line)['encoding'] if chardet.detect(line) else 'ascii'
+    line_decoded = line.decode(encoding).strip()
+    print("Decoded line:", line_decoded)  # Debug print to show the received line
+    if "T1:" in line_decoded and "H1:" in line_decoded and "V1:" in line_decoded:
+        data_parts = line_decoded.split(" ")
+        extracted_data = {}
+        for part in data_parts:
+            if part.startswith("T1:"):
+                temp = float(part.split(":")[1])
+                extracted_data["Temperature"] = temp
+            elif part.startswith("H1:"):
+                humidity = float(part.split(":")[1])
+                extracted_data["Humidity"] = humidity
+            elif part.startswith("V1:"):
+                voc = float(part.split(":")[1])
+                extracted_data["VOC"] = voc
+
+        # Print extracted data
+        print("Extracted data:", extracted_data)
+
+        # Write data to InfluxDB
+        write_api.write(bucket="FYP Database",
+                        record=[
+                            Point("temperature").tag("sensor", "Slave 1").field("value", temp).time(datetime.utcnow()),
+                            Point("humidity").tag("sensor", "Slave 1").field("value", humidity).time(datetime.utcnow()),
+                            Point("voc").tag("sensor", "Slave 1").field("value", voc).time(datetime.utcnow())
+                        ])
+        print("Data added to InfluxDB:", extracted_data)

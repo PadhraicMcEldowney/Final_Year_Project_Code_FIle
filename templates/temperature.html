@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Page</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<style>
+    /* CSS sheet references the graphic breakdown of webpage */
+
+/* Main body Section */
+body {
+    display: flex;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0px;
+}
+
+/* Nav-Bar Section */
+
+aside {
+    width: 5%;
+    height:relative;
+    background-color: #04AA6D;
+    padding: 10px;
+    display: block;
+
+}
+
+
+/* to space buttons out */
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+.homebtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+.tempbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+.humiditybtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+.vocbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 50px;
+}
+
+/* Code to remove purple colour when link is previously visited */
+a:visited { 
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Title section */
+
+.titleSection {
+    padding: 20px;
+    background-color: #04AA6D;
+    width: 960px;
+    font-size: x-large;
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    border: none;
+    border-radius: 10%;
+    right: 0;
+    display: flex;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Aptos', sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: 'Aptos', sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 4px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+/* Graph Section */
+
+
+.graphSect {
+    background-repeat: no-repeat;
+    color : white;
+    padding: 80px;
+    width: 880px;
+    height: 340px;
+    box-sizing: content-box;
+    background-image: url('../static/temperature\ graph\ .png');
+}
+
+/* Summary Section */
+.summarySect {
+    background-color:darkseagreen;
+    width: 1000px;
+}
+
+.ul {
+    list-style: none;
+    display:block;
+    text-decoration: none;
+}
+
+/* CSS to make webpage responsive */
+
+@media screen {
+    
+}
+</style>
+
+
+<body>
+    <aside>
+        <button class="homebtn"><a href="/"><i class="fa-solid fa-house"></i></a></button>
+        <button class="tempbtn"><a href="/temperature"><i class="fa-solid fa-temperature-three-quarters"></i></a></button>
+        <button class="humiditybtn"><a href="/humidity"><i class="fa-solid fa-droplet"></i></a></button>
+        <button class="vocbtn"><a href="/voc"><i class="fa-solid fa-wind"></i></a></button>
+    </aside>
+
+        <main>
+            <section class="titleSection">Air Quality - Temperature Results
+                <div class="dropdown" style="float: right;">
+                    <button class="dropbtn"><i class="fa-regular fa-clock"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">1hr</a>
+                        <a href="#">2hr</a>
+                        <a href="#">4hr</a>
+                        <a href="#">6hr</a>
+                        <a href="#">12hr</a>
+                        <a href="#">24hr</a>
+                    </div>
+                </div>
+            </section>
+            <section class="graphSect">
+            </section>
+            <section class="summarySect">Summary Table:
+                <div>The lowest temperature is: 22.8</div>
+                <div>The highest temperature is: 26.3</div>
+                <div>The average temperature is: 24.1</div>
+                <div style="padding-top: 10px;"><b>Summary of Temperature Values:</b></div>
+                <div>
+                    This temperature is within the normal ranges of indoor temperatures.
+                </div>
+            </section>
+        </main>
+</body>
+</html>
